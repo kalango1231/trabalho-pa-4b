@@ -1,0 +1,6 @@
+# arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# configurações do editor
+.vscode/

@@ -1,0 +1,90 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: #1a1a1a; background: #faf8f4; }
+
+/* ---------- topo ---------- */
+.topo { background: #fdc07d; padding: 26px 16px 30px; border-radius: 0 0 36px 36px;
+        box-shadow: 0 8px 24px rgba(181,110,40,.18); position: relative; }
+.topo-linha { display: flex; justify-content: center; max-width: 1200px; margin: 0 auto; }
+.logo { font-family: Oswald, Impact, sans-serif; font-size: clamp(32px, 6vw, 68px); letter-spacing: 3px; color: #111;
+        text-decoration: none; text-align: center; line-height: 1; }
+.logo small { display: block; font-family: Inter, sans-serif; font-size: 12px; letter-spacing: 6px; font-weight: 600;
+              color: #7a4a1e; margin-top: 8px; }
+.generos { display: flex; margin: 24px auto 0; background: #fffde8; border-radius: 999px; width: fit-content; padding: 5px;
+           box-shadow: inset 0 1px 3px rgba(0,0,0,.08); }
+.generos a { padding: 10px 36px; border-radius: 999px; text-decoration: none; color: #555; font-weight: 700;
+             letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; transition: all .2s; }
+.generos a.ativa { background: #222; color: #fffde8; box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+.menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 18px; }
+.pilula { min-width: 140px; padding: 11px 20px; border-radius: 999px; background: #fffde8; text-align: center;
+          text-decoration: none; color: #333; font-size: 14px; font-weight: 600; transition: all .2s;
+          box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.pilula:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.12); }
+.pilula.ativa { background: #222; color: #fffde8; }
+
+/* ---------- título e banner ---------- */
+main { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+.titulo { margin: 34px auto 22px; max-width: 760px; background: #fffde8; border-radius: 999px; padding: 14px 24px;
+          text-align: center; font-weight: 400; font-size: clamp(22px, 3vw, 32px); box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.banner { height: 320px; overflow: hidden; display: flex; align-items: flex-end; justify-content: space-between;
+          border-radius: 28px; box-shadow: 0 14px 34px rgba(120,70,30,.18);
+          background: linear-gradient(120deg, #f8ead6 0%, #efd3ad 55%, #d6a473 100%); }
+.banner-texto { padding: 40px 52px; align-self: center; }
+.banner-chamada { margin: 0; font-family: Oswald, Impact, sans-serif; font-size: 18px; letter-spacing: 4px;
+                  text-transform: uppercase; color: #8a5a32; }
+.banner-frase { margin: 10px 0 22px; font-size: clamp(24px, 3.4vw, 42px); font-weight: 700; line-height: 1.12; color: #3a2416; }
+.banner-botao { display: inline-block; background: #222; color: #fffde8; padding: 13px 28px; border-radius: 999px;
+                text-decoration: none; font-weight: 600; transition: all .2s; }
+.banner-botao:hover { background: #000; transform: translateY(-2px); }
+.arara { height: 100%; max-width: 58%; }
+
+/* ---------- vantagens ---------- */
+.vantagens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 26px 0 40px; }
+.vantagem { display: flex; align-items: center; gap: 14px; background: #fff; border-radius: 18px; padding: 16px 20px;
+            box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+.vantagem span { font-size: 28px; }
+.vantagem b { display: block; font-size: 15px; }
+.vantagem small { color: #777; font-size: 13px; }
+
+/* ---------- produtos ---------- */
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 36px 32px; padding-bottom: 70px; }
+.card { display: flex; flex-direction: column; background: #fff; border-radius: 24px; overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0,0,0,.07); transition: transform .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(0,0,0,.13); }
+.foto { position: relative; aspect-ratio: 3/4; display: grid; place-items: center; overflow: hidden;
+        background: radial-gradient(circle at 50% 40%, #fbfaf7, #e7e4de); }
+.foto:has(img) { background: #fff; }
+.foto img { width: 100%; height: 100%; object-fit: contain; padding: 10px; transition: transform .4s; }
+.card:hover .foto img { transform: scale(1.05); }
+.peca { width: 70%; height: 80%; filter: drop-shadow(0 10px 12px rgba(0,0,0,.15)); transition: transform .25s; }
+.card:hover .peca { transform: scale(1.05) rotate(-1deg); }
+.destaque { position: absolute; top: 18px; left: 0; background: #222; color: #fdc07d;
+            font-family: Oswald, Impact, sans-serif; font-size: 20px; letter-spacing: 3px; text-transform: uppercase;
+            padding: 6px 18px 6px 16px; border-radius: 0 999px 999px 0; box-shadow: 0 4px 10px rgba(0,0,0,.18); }
+.preco { margin: -26px 18px 0; z-index: 1; background: #fdc07d; border-radius: 999px; padding: 14px; text-align: center;
+         font-size: 20px; box-shadow: 0 6px 14px rgba(245,165,79,.35); }
+.preco s { color: #7a5a3a; font-size: 16px; margin-right: 4px; }
+.info { padding: 18px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+.info h2 { margin: 0 0 10px; font-size: 18px; font-weight: 700; }
+.info p { margin: 0; font-size: 13px; color: #666; }
+.comprar { margin-top: auto; width: 100%; padding: 13px; border: none; border-radius: 999px; background: #222;
+           color: #fffde8; font: inherit; font-weight: 600; cursor: pointer; transition: background .2s; }
+.info p + .comprar { margin-top: 16px; }
+.comprar:hover { background: #000; }
+.vazio { text-align: center; padding: 60px 16px; font-size: 18px; }
+
+/* ---------- rodapé ---------- */
+
+.aviso { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 140px); background: #222; color: #fffde8;
+         padding: 14px 24px; border-radius: 999px; transition: transform .3s; box-shadow: 0 10px 24px rgba(0,0,0,.25);
+         max-width: calc(100% - 32px); z-index: 10; }
+.aviso.mostrar { transform: translate(-50%, 0); }
+
+@media (max-width: 760px) {
+  .generos a { padding: 10px 22px; }
+  .pilula { min-width: 0; flex: 1 1 40%; }
+  .banner { height: auto; flex-direction: column; align-items: stretch; }
+  .banner-texto { padding: 26px 22px 10px; }
+  .arara { max-width: 100%; height: 170px; }
+  .vantagens { grid-template-columns: 1fr; }
+}

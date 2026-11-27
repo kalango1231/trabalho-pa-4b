@@ -1,10 +1,5 @@
 """Gera o site para o Live Server: index.html + styles.css.
 
-Não precisa instalar nada (só o Python). Rode:
-    python gerar_site.py
-Depois abra o index.html com o Live Server.
-
-Os produtos, preços e cores vêm do app.py. Mudou algo lá? Rode este arquivo de novo.
 """
 import re
 import sys

@@ -1,12 +1,4 @@
-"""Tira o fundo das fotos e coloca fundo BRANCO.
 
-Como usar:
-  1. Coloque as fotos novas na pasta "fotos_originais"
-  2. Rode:  python preparar_fotos.py
-  3. As fotos prontas (fundo branco, mesmo tamanho) vão para a pasta "fotos"
-
-Precisa de:  pip install "rembg[cpu]" pillow
-"""
 from pathlib import Path
 from PIL import Image
 from rembg import remove, new_session
